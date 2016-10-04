@@ -3,10 +3,15 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.6.1"
+    "fitbit-js": "^0.3.2",
+    "jquery": "^3.1.1",
+    "react-bootstrap": "^0.30.3",
+    "react-scripts": "0.6.1",
+    "request": "^2.75.0"
   },
   "dependencies": {
     "react": "^15.3.2",
+    "react-bootstrap": "^0.30.3",
     "react-dom": "^15.3.2"
   },
   "scripts": {
