@@ -5,7 +5,7 @@ class Pledge extends Component {
   render() {
     return (
       <div className='text-center'>
-        <button type="button" className="btn btn-primary btn-lg">Pledge</button>
+        <button type="button" className="btn btn-success btn-xlarge">Pledge Now</button>
       </div>
     );
   }

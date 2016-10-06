@@ -16,27 +16,6 @@ class App extends Component {
     this.showRunningLog = this.showRunningLog.bind(this);
     this.showPledgeLog = this.showPledgeLog.bind(this);
   }
-  fitbitRequest() {
-    $.ajax({
-       url: 'https://api.fitbit.com/1/user/3Y2M7T/activities/list.json',
-       headers: {
-         "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzWTJNN1QiLCJhdWQiOiIyMjgyR1QiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyYWN0IiwiZXhwIjoxNDc1NDUwNjI5LCJpYXQiOjE0NzUzNjUyNTZ9.CsLKjhLOatMlY7YaAtrq_TeQinhTQOp7_WTtKq8Q64I"
-       },
-       data: {
-          afterDate: '2016-01-01',
-          offset: '0',
-          sort: 'asc',
-          limit: '10'
-       },
-       error: function() {
-          console.log('an error occurred')
-       },
-       success: function(data) {
-          console.log(data)
-       },
-       type: 'GET'
-    });
-  }
   showRunningLog() {
     this.setState({ runningLog: true })
   }
@@ -51,7 +30,6 @@ class App extends Component {
     }
   }
   render() {
-    this.fitbitRequest();
     return (
       <div className="container-fluid">
         <div className='top-portion'>
@@ -63,13 +41,13 @@ class App extends Component {
           </div>
         </div>
         <PhotoInfo />
-        <div className="row">
-          <div className="btn-group btn-group-lg" role="group" aria-label="...">
+        <div className="row text-center bottom-portion">
+          <div className="btn-group btn-group-md" role="group" aria-label="...">
             <button
               className="btn btn-default"
               type="submit"
               onClick={this.showRunningLog}>
-                Running Log
+                Run Log
             </button>
             <button
               className="btn btn-default"
@@ -78,7 +56,9 @@ class App extends Component {
                 Pledges
             </button>
           </div>
-          { this.renderLogOrPledges() }
+          <div className='container-fluid log'>
+            { this.renderLogOrPledges() }
+          </div>
         </div>
       </div>
     );

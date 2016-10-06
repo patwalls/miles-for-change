@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import RunningLogItem from './RunningLogItem.js';
 
 class RunningLog extends Component {
   render() {
@@ -13,16 +14,8 @@ class RunningLog extends Component {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>10/01/2016</td>
-            <td>5</td>
-            <td>9:00 / mile</td>
-          </tr>
-          <tr>
-            <td>10/02/2016</td>
-            <td>7</td>
-            <td>9:15 / mile</td>
-          </tr>
+          <RunningLogItem date={ '2016-03-05' }/>
+          <RunningLogItem date={ '2016-03-06' }/>
         </tbody>
       </table>
     );

@@ -42,8 +42,68 @@
 
 .top-portion {
   background-color: #F7F7F9;
+  padding-bottom: 15px;
+  margin-bottom: 35px;
 }
 
 .big-number h1 {
   font-style: bold;
+}
+
+.campaign-stats {
+  width: 55%;
+}
+
+.photo-info {
+  width: 80%;
+}
+
+.info {
+  font-size: 1.2em;
+}
+
+.charity {
+  display: flex;
+  font-size: 14px;
+  background-color: #F7F7F9;
+}
+
+.details {
+  background-color: #F7F7F9;
+}
+
+.charity div {
+  margin-left: 10px;
+}
+
+.sub-info {
+
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.moustache-photo {
+  height: 100px;
+}
+
+.btn-xlarge {
+    padding: 20px 35px;
+    font-size: 30px; //change this to your desired size
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+}
+
+.pledge {
+  background-color: none;
+}
+
+.log {
+  width: 60%;
+}
+
+.bottom-portion {
+  padding-top: 15px;
+  background-color: #F7F7F9;
 }
